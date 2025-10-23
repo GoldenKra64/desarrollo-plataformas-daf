@@ -1,4 +1,10 @@
-git clone https://github.com/GoldenKra64/desarrollo-plataformas-web.git
+Cambio para eliminar las ramas que se crearon desde remoto:
+
+git fetch -p
+
+---------------------------------------
+
+git clone https://github.com/GoldenKra64/desarrollo-plataformas-daf.git
 
 cd desarrollo-plataformas-web
 
@@ -8,7 +14,11 @@ git remote -v
 
 git branch -a
 
-git checkout branch-name
+git checkout -b branch-name
+
+(feat/"parte del proyecto")
+
+(fix/"parte del proyecto")
 
 ---------------------------------------
 
