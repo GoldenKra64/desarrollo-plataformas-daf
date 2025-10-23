@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>DAF - Decoraciones</title>
+</head>
+<body class="font-sans bg-[#FFFFFF]">
+
+  <header class="flex items-center justify-between p-4 bg-orange-200">
+    <div class="flex items-center space-x-4">
+      <img src="/resources/logo.jpeg" alt="Logo" class="h-12 w-12 object-contain" />
+      <h3 class="text-xl font-bold text-gray-800">Decoraciones de arreglos florales</h3>
+    </div>
+    <nav>
+      <ul class="flex space-x-6 text-gray-700 font-medium">
+        <li><a href="/index.html" class="hover:text-orange-400">Home</a></li>
+        <li><a href="/routes/services/services.html" class="hover:text-orange-400">Productos</a></li>
+        <li><a href="/routes/contact/contact.html" class="hover:text-orange-400">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="relative w-full h-[400px] flex justify-center items-center overflow-hidden">
+    <img src="/resources/index/banner.jpg" alt="Banner" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black opacity-40 z-[2]"></div>
+    <h1 class="absolute top-[40%] w-4/5 text-white text-[30px] text-center z-[3] mx-auto left-0 right-0 drop-shadow-[2px_2px_4px_rgba(0,0,0,1)]">
+      Obten los mejores arreglos florales de la ciudad
+    </h1>
+    <h2 class="absolute top-[65%] w-4/5 text-white text-[25px] text-center z-[3] mx-auto left-0 right-0 drop-shadow-[2px_2px_4px_rgba(0,0,0,1)]">
+      Para aquellas ocasiones importantes
+    </h2>
+    <a href="/routes/contact/contact.html"
+       class="absolute bottom-[20px] left-1/2 -translate-x-1/2 z-[3] 
+              px-5 py-2.5 mt-5 mb-5 text-[18px] bg-orange-500 text-white rounded 
+              no-underline hover:bg-orange-600 transition duration-200">
+      Contáctanos
+    </a>
+  </section>
+
+  <div class="flex flex-col items-center justify-center my-6">
+    <h4 class="text-orange-800 opacity-60">¡Empieza a decorar tus eventos importantes!</h4>
+    <h1 class="text-2xl font-bold text-orange-800">Nuestros productos</h1>
+  </div>
+
+  <section class="flex justify-center items-center flex-wrap gap-6 my-8">
+    <article class="w-[250px] h-[300px] bg-[#FDCB80] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+      <img src="/resources/index/bouquet.png" alt="Bouquet" class="w-10 h-10 mb-2" />
+      <h2 class="text-[25px] font-bold text-orange-800 mb-2">Bouquets de flores</h2>
+      <p>Arreglos elegantes y llenos de color para regalar o decorar cualquier ocasión especial.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FDCB80] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+      <img src="/resources/index/fishbowl_icon.png" alt="Peceras" class="w-10 h-10 mb-2" />
+      <h2 class="text-[25px] font-bold text-orange-800 mb-2">Peceras de flores</h2>
+      <p>Decoraciones únicas en peceras de cristal con flores frescas y diseños encantadores.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FDCB80] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+      <img src="/resources/index/flowercrown_icon.png" alt="Corona de flores" class="w-10 h-10 mb-2" />
+      <h2 class="text-[25px] font-bold text-orange-800 mb-2">Corona de flores</h2>
+      <p>Coronas artesanales ideales para eventos, sesiones de fotos o un toque natural de belleza.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FDCB80] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+      <img src="/resources/index/flowerpot_icon.png" alt="Pedestal de flores" class="w-10 h-10 mb-2" />
+      <h2 class="text-[25px] font-bold text-orange-800 mb-2">Pedestales con flores</h2>
+      <p>Composiciones florales en pedestales que realzan espacios con elegancia y estilo natural.</p>
+    </article>
+  </section>
+
+  <div class="flex justify-center my-8">
+    <a href="/routes/services/services.html"
+       class="px-5 py-2.5 text-[18px] bg-orange-500 text-white rounded 
+              no-underline hover:bg-orange-600 transition duration-200">
+      Ver más productos
+    </a>
+  </div>
+
+  <hr class="bg-orange-800 h-[2px] w-4/5 mx-auto my-10"/>
+
+  <div class="flex flex-col items-center justify-center text-orange-800 opacity-80">
+    <h1 class="text-3xl font-bold">¿Quiénes somos?</h1>
+    <h3 class="text-lg">Nuestro direccionamiento</h3>
+  </div>
+
+  <section class="flex flex-col items-center justify-center gap-8 mx-8 my-10">
+    <article class="flex flex-col md:flex-row items-center gap-6 w-full max-w-5xl hover:scale-105 transition">
+      <div class="w-full md:w-1/2 bg-[#FDCB80] p-6 rounded-2xl flex flex-col items-center text-orange-800 hover:bg-orange-500 transition">
+        <img src="/resources/index/team.png" alt="Nosotros" class="w-12 h-12 mb-2" />
+        <h1 class="text-2xl font-bold mb-2">Nosotros</h1>
+        <p class="text-center">Somos un emprendimiento ecuatoriano apasionado por las flores y su poder para transformar momentos cotidianos en recuerdos inolvidables, combinamos el arte floral con un servicio de entrega confiable y personalizado.
+Trabajamos con productores locales para ofrecer flores frescas y de alta calidad, apoyando así a la floricultura nacional. Cada arreglo es diseñado con dedicación, buscando reflejar los sentimientos de quien lo envía y sorprender a quien lo recibe.
+
+Nuestro compromiso es simple: hacer florecer emociones, un detalle a la vez.</p>
+      </div>
+      <img src="/resources/index/us_banner.png" alt="Nosotros" class="w-full md:w-1/2 rounded-lg" />
+    </article>
+
+    <article class="flex flex-col md:flex-row-reverse items-center gap-6 w-full max-w-5xl hover:scale-105 transition">
+      <div class="w-full md:w-1/2 bg-[#FDCB80] p-6 rounded-2xl flex flex-col items-center text-orange-800 hover:bg-orange-500 transition">
+        <img src="/resources/index/vision.png" alt="Visión" class="w-12 h-12 mb-2" />
+        <h1 class="text-2xl font-bold mb-2">Nuestra Visión</h1>
+        <p class="text-center">Llegar a ser la empresa líder en arreglos florales a domicilio en Ecuador, reconocida por nuestra creatividad, puntualidad y compromiso con la sostenibilidad. Queremos que cada flor que entreguemos inspire emociones y fortalezca vínculos entre las personas.</p>
+      </div>
+      <img src="/resources/index/vision_banner.jpg" alt="Visión" class="w-full md:w-1/2 rounded-lg" />
+    </article>
+
+    <article class="flex flex-col md:flex-row items-center gap-6 w-full max-w-5xl hover:scale-105 transition">
+      <div class="w-full md:w-1/2 bg-[#FDCB80] p-6 rounded-2xl flex flex-col items-center text-orange-800 hover:bg-orange-500 transition">
+        <img src="/resources/index/objective.png" alt="Misión" class="w-12 h-12 mb-2" />
+        <h1 class="text-2xl font-bold mb-2">Nuestra Misión</h1>
+        <p class="text-center">Brindar alegría, amor y conexión a través de arreglos florales únicos, elaborados con flores frescas ecuatorianas y entregados directamente al hogar o lugar de trabajo de nuestros clientes. Buscamos convertir cada entrega en una experiencia especial que exprese sentimientos con belleza, calidad y calidez.</p>
+      </div>
+      <img src="/resources/index/mission_banner.jpg" alt="Misión" class="w-full md:w-1/2 rounded-lg" />
+    </article>
+  </section>
+
+  <div class="flex justify-center my-8">
+    <a href="/routes/contact/contact.html"
+       class="px-5 py-2.5 text-[18px] bg-orange-500 text-white rounded 
+              no-underline hover:bg-orange-600 transition duration-200">
+      Contáctanos
+    </a>
+  </div>
+</body>
+
+<footer class="bg-[#FCD4AD] text-black justify-around items-center">
+    <div class="flex gap-5 justify-around items-center py-5">
+        <section class="flex flex-col items-center">
+            <img src="/resources/logo.png" alt="Logo" class="w-32 h-32 mb-2"/>
+            <h1 class="text-2xl font-bold text-green-900">SUPERNUTRIS</h1>
+        </section>
+            <section class="flex flex-col items-center text-center">
+            <img src="/resources/location.png" alt="Ubicación" class="w-8 h-8 mb-2" />
+            <h1 class="text-lg font-bold mb-1">Ubícanos</h1>
+            <a href="https://maps.app.goo.gl/y4ZXL5yssfoZAuLs8" class="text-green-900 underline">
+                Zamora Oe3-33 y Edmundo Chiriboga
+            </a>
+        </section>
+    </div>
+    <div class="bg-orange-800 w-full h-[40px] flex justify-center items-center text-white">
+    © Todos los derechos reservados
+  </div>
+</footer>
+</html>

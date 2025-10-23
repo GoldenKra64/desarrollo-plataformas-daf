@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Supernutris - Servicios</title>
+</head>
+<body class="font-sans bg-white">
+
+<!-- HEADER -->
+<header class="flex items-center justify-between p-4 bg-[#F2FFEC]">
+    <div class="flex items-center space-x-4">
+        <img src="/resources/logo.png" alt="Logo" class="h-12 w-12 object-contain" />
+        <h3 class="text-xl font-bold text-gray-800">SUPERNUTRIS</h3>
+    </div>
+    <nav>
+        <ul class="flex space-x-6 text-gray-700 font-medium">
+            <li><a href="/index.html" class="hover:text-orange-400">Home</a></li>
+            <li><a href="/routes/services/services.html" class="text-orange-400 font-semibold">Servicios</a></li>
+            <li><a href="/routes/contact/contact.html" class="hover:text-orange-400">Nosotros</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- TÍTULO -->
+<div class="flex flex-col items-center justify-center mt-10 text-green-800">
+    <h1 class="text-3xl font-bold">Nuestros Servicios</h1>
+    <p class="opacity-60">Explora todo lo que tenemos para ti</p>
+</div>
+
+<!-- SECCIÓN DE SERVICIOS -->
+<section class="flex justify-center items-center flex-wrap gap-6 my-10 px-4">
+
+    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+        <img src="/resources/index/healthy_food.png" alt="Nutrición Personalizada" class="w-10 h-10 mb-2" />
+        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición Personalizada</h2>
+        <p>Planes adaptados a tus metas y necesidades.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+        <img src="/resources/index/pregnant-woman.png" alt="Nutrición en el Embarazo" class="w-10 h-10 mb-2" />
+        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición en el Embarazo</h2>
+        <p>Apoyo al desarrollo del bebé y alimentación complementaria.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+        <img src="/resources/index/vegan.png" alt="Nutrición para Vegetarianos" class="w-10 h-10 mb-2" />
+        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición para Vegetarianos</h2>
+        <p>Menús equilibrados adaptados al estilo vegano.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+        <img src="/resources/index/diabetes-care.png" alt="Nutrición para la Diabetes" class="w-10 h-10 mb-2" />
+        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición para la Diabetes</h2>
+        <p>Hábitos saludables para controlar la diabetes.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+        <img src="/resources/services/prioritary.png" alt="Grupos Prioritarios" class="w-10 h-10 mb-2" />
+        <h2 class="text-[25px] font-bold text-green-800 mb-2">Grupos Prioritarios</h2>
+        <p>Planes adaptados a cada etapa de la vida.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+        <img src="/resources/services/sport.jpg" alt="Alimentación Deportiva" class="w-10 h-10 mb-2" />
+        <h2 class="text-[25px] font-bold text-green-800 mb-2">Alimentación Deportiva</h2>
+        <p>Estrategias para mejorar rendimiento y recuperación.</p>
+    </article>
+
+    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
+        <img src="/resources/services/education.png" alt="Educación Nutricional" class="w-10 h-10 mb-2" />
+        <h2 class="text-[25px] font-bold text-green-800 mb-2">Educación Nutricional</h2>
+        <p>Charlas y talleres para hábitos saludables.</p>
+    </article>
+</section>
+
+<!-- BOTÓN DETALLES -->
+<div class="flex justify-center my-8">
+    <a href="/routes/details/details.html"
+       class="px-5 py-2.5 text-[18px] bg-orange-500 text-white rounded
+              no-underline hover:bg-orange-600 transition duration-200">
+        Más Detalles
+    </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-[#F2FFEC] text-black justify-around items-center">
+    <div class="flex gap-5 justify-around items-center py-5">
+        <section class="flex flex-col items-center">
+            <img src="/resources/logo.png" alt="Logo" class="w-32 h-32 mb-2"/>
+            <h1 class="text-2xl font-bold text-green-900">SUPERNUTRIS</h1>
+        </section>
+        <section class="flex flex-col items-center text-center">
+            <img src="/resources/location.png" alt="Ubicación" class="w-8 h-8 mb-2" />
+            <h1 class="text-lg font-bold mb-1">Ubícanos</h1>
+            <a href="https://maps.app.goo.gl/y4ZXL5yssfoZAuLs8" class="text-green-900 underline">
+                Zamora Oe3-33 y Edmundo Chiriboga
+            </a>
+        </section>
+    </div>
+    <div class="bg-green-800 w-full h-[40px] flex justify-center items-center text-white">
+        © Todos los derechos reservados
+    </div>
+</footer>
+
+</body>
+</html>
