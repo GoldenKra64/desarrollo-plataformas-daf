@@ -1,152 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Supernutris - Detalles de servicios</title>
+    <title>DAF - Detalles de productos</title>
 </head>
+<body class="font-sans bg-white text-gray-800">
 
-<body class="font-sans bg-[#FFFFFF] text-gray-800">
-<header class="flex items-center justify-between p-4 bg-[#F2FFEC]">
+<!--header-->
+<header class="flex items-center justify-between p-4 bg-orange-200">
     <div class="flex items-center space-x-4">
-        <img src="/resources/logo.png" alt="Logo" class="h-12 w-12 object-contain" />
-        <h3 class="text-xl font-bold text-gray-800">SUPERNUTRIS</h3>
+        <img src="/resources/logo.jpeg" alt="Logo DAF" class="h-12 w-12 object-contain"/>
+        <h3 class="text-xl font-bold text-gray-800">Decoraciones de arreglos florales</h3>
     </div>
     <nav>
         <ul class="flex space-x-6 text-gray-700 font-medium">
-            <li><a href="/index.html" class="hover:text-orange-400">Home</a></li>
-            <li><a href="/routes/services/services.html" class="hover:text-orange-400">Servicios</a></li>
-            <li><a href="/routes/contact/contact.html" class="hover:text-orange-400">Nosotros</a></li>
+            <li><a href="/index.html" class="hover:text-orange-500">Home</a></li>
+            <li><a href="/routes/services/services.html" class="hover:text-orange-500">Productos</a></li>
+            <li><a href="/routes/contact/contact.html" class="hover:text-orange-500">Nosotros</a></li>
         </ul>
     </nav>
 </header>
 
-<!--Titulo de la pagina-->
-<div class="flex flex-col items-center justify-center my-8 text-green-800">
-    <h1 class="text-3xl font-bold">Detalles de nuestros servicios</h1>
-    <h4 class="opacity-70 text-lg">Conoce nuestros planes personalizados según tus necesidades</h4>
+<!--Titulo detalles-->
+<div class="max-w-6xl mx-auto px-4 mt-8 text-center">
+    <h1 class="text-3xl font-bold text-orange-800">Detalles de productos</h1>
+    <p class="mt-1 text-orange-900/70">Explora opciones, flores sugeridas, usos ideales y precios de referencia.</p>
 </div>
 
-<!--Seccion de servicios-->
-<section class="space-y-10 max-w-5xl mx-auto px-4 mb-10">
-    <!--Servicio 1-->
-    <article class="bg-[#FFEB9A] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:bg-orange-500 hover:scale-[1.02] transition">
-        <img src="/resources/details/nutricionista_servicio1.jpg" alt="Nutricionista Jenifer Miguez" class="w-24 md:w-36 object-contain" />
-        <div class="text-green-800">
-            <h2 class="text-2xl font-bold mb-3">Nutrición personalizada</h2>
-            <p class="mb-2">Cada persona es única, y sus necesidades nutricionales también lo son.</p>
-            <p class="mb-2">A través de un enfoque integral y basado en evidencia científica, diseñamos planes totalmente personalizados adaptados a tus objetivos, estilo de vida, preferencias y requerimientos específicos.</p>
-            <p class="mb-2">Ya sea que busques perder grasa, aumentar masa muscular, mejorar tu digestión, optimizar tu energía diaria o simplemente adoptar hábitos más saludables, elaboramos un plan realista, flexible y sostenible que se adapte a ti.</p>
-            <p class="mb-2">Brindamos seguimiento constante para garantizar resultados duraderos y bienestar a largo plazo.</p>
-            <p class="mb-2">Precio del plan: 50 $</p>
-            <p class="font-bold"> Nutricionista a cargo: Dra. Jenifer Miguez</p>
+<!--Listado de detalles-->
+<section class="max-w-6xl mx-auto px-4 my-10 space-y-8">
+    <!-- Bouquets de flores -->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/bouquet.jpg" alt="Bouquets de flores" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Bouquets de flores</h2>
+                <p class="mt-2">Arreglos elegantes y versátiles. Se trabajan en diferentes tamaños y combinaciones de color, con envolturas premium y acabados decorativos.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Rosas, astromelias, lirios, gerberas, claveles, gypsophila, eucalipto.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Cumpleaños, aniversarios, graduaciones, agradecimientos.</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Clásico</span>
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Premium</span>
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Colores a elección</span>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $18</span>
+                    <a href="/routes/contact/contact.html?producto=Bouquet"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
 
-    <!--Servicio 2-->
-    <article class="bg-[#FFEB9A] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:bg-orange-500 hover:scale-[1.02] transition">
-        <img src="/resources/details/nutricionista_servicio2.jpg" alt="Nutricionista Allison Changoluisa" class="w-24 md:w-40 object-contain" />
-        <div class="text-green-800">
-            <h2 class="text-2xl font-bold mb-3">Nutrición en el embarazo</h2>
-            <p class="mb-2">La alimentación durante el embarazo y los primeros 1000 días de vida es fundamental para el desarrollo saludable del bebé y el bienestar de la madre.</p>
-            <p class="mb-2">Nuestro servicio cubre todos los requerimientos nutricionales durante este período crucial, fomentando un desarrollo óptimo del infante y previniendo deficiencias nutricionales.</p>
-            <p class="mb-2">También brindamos acompañamiento en la alimentación complementaria para el bebé, asegurando una transición adecuada y potenciando su crecimiento y desarrollo integral.</p>
-            <p class="mb-2">Precio del plan: 30 $</p>
-            <p class="font-bold"> Nutricionista a cargo: Dra. Allison Changoluisa</p>
+    <!--Cajas de rosas-->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/caja_rosas.jpeg" alt="Cajas de rosas" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Cajas de rosas</h2>
+                <p class="mt-2">Presentación elegante en caja cilíndrica o cuadrada. Conserva hidratación y forma por más tiempo.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Rosas premium, follaje fino (eucalipto, ruscus).</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Aniversarios, San Valentín, cumpleaños, ocasiones especiales.</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">12–36 rosas</span>
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Color personalizable</span>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $28</span>
+                    <a href="/routes/contact/contact.html?producto=Caja%20de%20rosas"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
 
-    <!--Servicio 3-->
-    <article class="bg-[#FFEB9A] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:bg-orange-500 hover:scale-[1.02] transition">
-        <img src="/resources/details/nutricionista_servicio3.jpg" alt="Nutricionista Alejandro Rosobela" class="w-24 md:w-40 object-contain" />
-        <div class="text-green-800">
-            <h2 class="text-2xl font-bold mb-3">Nutrición para vegetarianos</h2>
-            <p class="mb-2">Ofrecemos planes equilibrados y completos para quienes siguen una alimentación vegetariana o vegana, asegurando el aporte de proteínas, hierro, calcio y otros micronutrientes esenciales.</p>
-            <p class="mb-2">Diseñamos menús variados y prácticos que se adaptan a tu estilo de vida y valores.</p>
-            <p class="mb-2">Además, brindamos educación nutricional para que puedas mantener una dieta basada en plantas de forma saludable y sostenible.</p>
-            <p class="mb-2">Precio del plan: 30 $</p>
-            <p class="font-bold"> Nutricionista a cargo: Dr. Alejandro Rosobela</p>
+    <!--Coronas florales-->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/corona_flores.jpg" alt="Coronas florales" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Coronas florales</h2>
+                <p class="mt-2">Diseños solemnes y armoniosos, adaptados a protocolos y preferencias de color.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Claveles, crisantemos, lirios, rosas blancas, hojas de aspidistra.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Condolencias y homenajes.</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Banda con mensaje</span>
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Diámetros variables</span>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $45</span>
+                    <a href="/routes/contact/contact.html?producto=Corona%20floral"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
 
-    <!--Servicio 4-->
-    <article class="bg-[#FFEB9A] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:bg-orange-500 hover:scale-[1.02] transition">
-        <img src="/resources/details/nutricionista_servicio41.webp" alt="Nutricionista Kai Fonmig" class="w-24 md:w-40 object-contain" />
-        <div class="text-green-800">
-            <h2 class="text-2xl font-bold mb-3">Nutrición para la diabetes</h2>
-            <p class="mb-2">La alimentación adecuada juega un papel clave en la prevención y control de la diabetes tipo 2.</p>
-            <p class="mb-2">Aplicamos estrategias nutricionales personalizadas para estabilizar los niveles de glucosa y mejorar la sensibilidad a la insulina.</p>
-            <p class="mb-2">Te enseñamos a elegir alimentos de bajo índice glucémico y adoptar hábitos sostenibles que favorezcan tu bienestar.</p>
-            <p class="mb-2">Precio del plan: 40 $</p>
-            <p class="font-bold"> Nutricionista a cargo: Dr. Kai Fonmig</p>
+    <!--Peceras florales-->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/pecera_flores.jpg" alt="Peceras florales" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Peceras florales</h2>
+                <p class="mt-2">Composiciones modernas en vidrio, con flor focal y follaje en agua.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Rosas, hortensias, tulipanes (según temporada), orquídeas.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Centros de mesa en eventos, recepciones, oficinas.</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Vidrio esférico</span>
+                    <span class="px-2 py-0.5 rounded bg-white/60 text-orange-900 text-xs">Mantenimiento simple</span>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $22</span>
+                    <a href="/routes/contact/contact.html?producto=Pecera%20floral"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
 
-    <!--Servicio 5-->
-    <article class="bg-[#FFEB9A] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:bg-orange-500 hover:scale-[1.02] transition">
-        <img src="/resources/details/nutricionista_servicio5.webp" alt="Nutricionista Valentina Mazapig" class="w-24 md:w-40 object-contain" />
-        <div class="text-green-800">
-            <h2 class="text-2xl font-bold mb-3">Apoyo nutricional por grupos etarios</h2>
-            <p class="mb-2">Cada etapa de la vida tiene requerimientos específicos. Desde la infancia hasta la vejez, ofrecemos planes adaptados a cada grupo.</p>
-            <p class="mb-2">Nuestro objetivo es favorecer el crecimiento, la salud ósea y el envejecimiento saludable mediante estrategias personalizadas.</p>
-            <p class="mb-2">Precio del plan: 40 $</p>
-            <p class="font-bold">Nutricionista a cargo: Dra. Valentina Mazapig</p>
+    <!--Pedestales-->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/pedestal_flores.jpg" alt="Pedestales con flores" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Pedestales con flores</h2>
+                <p class="mt-2">Arreglos altos para entradas, pasillos o escenarios que buscan impacto visual.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Lirios, rosas, gladiolos, anturios, follaje XL.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Bodas, graduaciones, eventos corporativos.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $55</span>
+                    <a href="/routes/contact/contact.html?producto=Pedestal"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
 
-    <!--Servicio 6-->
-    <article class="bg-[#FFEB9A] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:bg-orange-500 hover:scale-[1.02] transition">
-        <img src="/resources/details/nutricionista_servicio6.webp" alt="Nutricionista Scarlet Johanson" class="w-24 md:w-40 object-contain" />
-        <div class="text-green-800">
-            <h2 class="text-2xl font-bold mb-3">Alimentación avanzada para deportistas</h2>
-            <p class="mb-2">Diseñamos estrategias nutricionales específicas según tu disciplina, objetivo y nivel de entrenamiento.</p>
-            <p class="mb-2">Buscamos optimizar el rendimiento físico, la recuperación muscular y la prevención de lesiones.</p>
-            <p class="mb-2">Precio del plan: 50 $</p>
-            <p class="font-bold"> Nutricionista a cargo: Dra. Scarlet Johanson</p>
+    <!--Arreglos simples-->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/arreglos_simples.jpeg" alt="Arreglo simple" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Arreglos simples</h2>
+                <p class="mt-2">Detalles rápidos y económicos con flores frescas y combinaciones armoniosas.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Astromelias, gerberas, claveles, mini rosas.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Detalles cotidianos, agradecimientos, visitas.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $12</span>
+                    <a href="/routes/contact/contact.html?producto=Arreglo%20simple"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
 
-    <!--Servicio 7-->
-    <article class="bg-[#FFEB9A] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 hover:bg-orange-500 hover:scale-[1.02] transition">
-        <img src="/resources/details/nutricionista_servicio7.webp" alt="Nutricionista Renato Patatín" class="w-24 md:w-36 object-contain" />
-        <div class="text-green-800">
-            <h2 class="text-2xl font-bold mb-3">Educación nutricional</h2>
-            <p class="mb-2">Ofrecemos charlas, talleres y programas educativos para empresas, colegios o comunidades.</p>
-            <p class="mb-2">Explicamos cómo elegir alimentos saludables, interpretar etiquetas y planificar comidas balanceadas.</p>
-            <p class="mb-2">El objetivo es empoderarte para tomar decisiones informadas que beneficien tu salud a largo plazo.</p>
-            <p class="mb-2">Precio del plan: 60 $</p>
-            <p class="font-bold"> Nutricionista a cargo: Dra. Renato Patatín</p>
+    <!--Canastos-->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/canasto_flores.jpg" alt="Canasto floral" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Canastos florales</h2>
+                <p class="mt-2">Arreglos en canasta con mix de flores y follajes, estilo cálido y campestre.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Gerberas, margaritas, rosas, solidago, eucalipto.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Cumpleaños, visitas, decoración del hogar.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $25</span>
+                    <a href="/routes/contact/contact.html?producto=Canasto"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
+
+    <!--Centros de mesa-->
+    <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="/resources/details/centros_mesa.jpg" alt="Centro de mesa" class="w-full md:w-60 rounded-xl object-cover"/>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-orange-900">Centros de mesa</h2>
+                <p class="mt-2">Diseños pensados para altura y diámetro adecuados, sin bloquear la vista de los invitados.</p>
+
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Flores sugeridas</h3>
+                        <p class="mt-1 text-sm">Rosas, hortensias, tulipanes (temporada), lisianthus.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>
+                        <p class="mt-1 text-sm">Bodas, recepciones, eventos corporativos.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $30</span>
+                    <a href="/routes/contact/contact.html?producto=Centro%20de%20mesa"
+                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                        Solicitar este producto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
 </section>
 
-<!--Boton de regreso-->
-<div class="flex justify-center my-8">
-    <a href="/index.html"
-       class="px-5 py-2.5 text-[18px] bg-orange-500 text-white rounded
-              no-underline hover:bg-orange-600 transition duration-200">
-        Volver al inicio
-    </a>
-</div>
-
 <!--Pie de pagina-->
-<footer class="bg-[#F2FFEC] text-black">
-    <div class="flex flex-col md:flex-row gap-6 justify-around items-center py-6">
-        <section class="flex flex-col items-center text-center">
-            <img src="/resources/logo.png" alt="Logo" class="w-28 h-28 mb-2"/>
-            <h1 class="text-2xl font-bold text-green-900">SUPERNUTRIS</h1>
+<footer class="bg-[#FCD4AD] text-black">
+    <div class="flex flex-col md:flex-row gap-6 justify-around items-center py-5">
+        <section class="flex flex-col items-center">
+            <img src="/resources/logo.jpeg" alt="Logo DAF" class="w-28 h-28 mb-2"/>
+            <h1 class="text-xl font-bold text-gray-800">Decoraciones DAF</h1>
         </section>
-
         <section class="flex flex-col items-center text-center">
-            <img src="/resources/location.png" alt="Ubicación" class="w-8 h-8 mb-2" />
+            <img src="/resources/location.png" alt="Ubicación" class="w-8 h-8 mb-2"/>
             <h1 class="text-lg font-bold mb-1">Ubícanos</h1>
             <a href="https://maps.app.goo.gl/y4ZXL5yssfoZAuLs8" class="text-green-900 underline hover:text-green-700">
                 Zamora Oe3-33 y Edmundo Chiriboga
             </a>
         </section>
     </div>
-    <div class="bg-green-800 w-full h-[40px] flex justify-center items-center text-white">
+    <div class="bg-orange-800 w-full h-[40px] flex justify-center items-center text-white">
         © Todos los derechos reservados
     </div>
 </footer>
