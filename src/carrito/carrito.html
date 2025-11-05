@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - DAF Decoraciones de Arreglos Florales</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fff7f2] text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-[#f4b183] flex items-center justify-between px-6 py-3 shadow">
+    <div class="flex items-center gap-3">
+      <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
+      <h1 class="text-white font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
+    </div>
+    <nav class="flex items-center gap-6 text-white font-medium">
+      <a href="/index.html" class="hover:underline">Home</a>
+      <a href="productos.html" class="hover:underline">Productos</a>
+      <a href="#contacto" class="hover:underline">Contáctanos</a>
+      <button class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
+        🛒
+      </button>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="flex-grow container mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-[#d26e4b]">CARRITO</h2>
+
+    <!-- Encabezados de tabla -->
+    <div class="grid grid-cols-5 font-semibold border-b pb-2 mb-4 text-center">
+      <p>Producto</p>
+      <p>Cantidad</p>
+      <p>Precio</p>
+      <p>Subtotal</p>
+      <p>Eliminar</p>
+    </div>
+
+    <!-- Contenedor dinámico del carrito -->
+    <div id="carrito-contenido" class="text-center text-gray-500 py-6">
+      El carrito se encuentra vacío 🛒
+    </div>
+
+    <!-- Total del carrito -->
+    <div class="text-right mt-6 text-lg font-semibold text-[#d26e4b]" id="carrito-total">
+      Total del carrito: 0$
+    </div>
+
+    <!-- Botón de pagar -->
+    <div class="flex justify-center mt-8">
+      <button class="bg-[#f4b183] text-white px-6 py-2 rounded shadow hover:bg-[#e89c67]">
+        Pagar
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contacto" class="bg-[#f4b183] text-white py-8">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-6">
+      <div class="flex flex-col items-center gap-3">
+        <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
+        <div class="flex gap-4">
+          <img src="/resources/footer/facebook.png" alt="Facebook" class="w-6 h-6 cursor-pointer">
+          <img src="/resources/footer/messenger.png" alt="Messenger" class="w-6 h-6 cursor-pointer">
+          <img src="/resources/footer/whatsapp.png" alt="WhatsApp" class="w-6 h-6 cursor-pointer">
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg mb-2">📞 Contactos</h4>
+        <p>+593 000000000</p>
+        <p>+593 000000000</p>
+        <p>dafdecoraciones@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
