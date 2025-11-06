@@ -3,82 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de contacto</title>
+    <title>DF - Contáctanos</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
+<body class="bg-[#fff7f2] text-gray-900 font-sans">
 
 <!-- Header responsive -->
-<header class="bg-green-100">
+<header class="bg-[#f4b183]">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <div class="flex items-center gap-3">
-            <img src="/resources/logo.png" alt="Logo" class="w-10 h-10">
-            <h2 class="text-lg sm:text-xl font-bold text-green-900">SUPERNUTRIS</h2>
+            <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-12 h-12 rounded-full">
+            <h2 class="text-lg sm:text-xl font-bold text-white">Decoraciones de Arreglos Florales</h2>
         </div>
 
-        <!-- Botón del menú móvil -->
-        <button id="menuBtn" class="sm:hidden text-green-900 text-2xl focus:outline-none">
-            ☰
-        </button>
+        <button id="menuBtn" class="sm:hidden text-white text-2xl">☰</button>
 
-        <!-- Navegación -->
-        <nav id="navMenu" class="hidden sm:block">
-            <ul class="flex flex-col sm:flex-row sm:items-center sm:gap-8 mt-4 sm:mt-0">
-                <li><a href="/index.html" class="block py-2 text-brown-800 font-semibold hover:text-orange-600 transition">Home</a></li>
-                <li><a href="/routes/services/services.html" class="block py-2 text-brown-800 font-semibold hover:text-orange-600 transition">Servicios</a></li>
-                <li><a href="/routes/contact/contact.html" class="block py-2 text-brown-800 font-semibold hover:text-orange-600 transition">Nosotros</a></li>
-            </ul>
+        <nav id="navMenu" class="hidden sm:flex gap-8">
+            <a href="/index.html" class="text-white font-semibold hover:text-[#ffe8d6]">Home</a>
+            <a href="#productos" class="text-white font-semibold hover:text-[#ffe8d6]">Productos</a>
+            <a href="/src/carrito/carrito.html" class="bg-white text-[#f4b183] py-2 px-3 rounded-full shadow hover:bg-[#ffe8d6]">🛒</a>
         </nav>
     </div>
 </header>
 
 <!-- Contenedor principal -->
 <main class="flex justify-center items-center py-10 px-4">
-    <form id="contactForm" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-2xl">
-        <h1 class="text-2xl sm:text-3xl font-bold text-center mb-6">Formulario de contacto</h1>
+    <form id="formContacto" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-2xl">
+        <h1 class="text-3xl font-extrabold text-center text-[#d26e4b] mb-6">Contáctanos 🌷</h1>
 
-        <input type="text" name="name" placeholder="Ingrese su nombre" required
-               class="w-full border border-gray-300 rounded-lg p-3 text-base mb-4 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <input id="nombre" type="text" placeholder="Tu nombre completo" required
+               class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-[#f4b183] focus:ring-2">
 
-        <input type="email" name="email" placeholder="Ingrese un correo válido" required
-               class="w-full border border-gray-300 rounded-lg p-3 text-base mb-4 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <input id="email" type="email" placeholder="Correo electrónico" required
+               class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-[#f4b183] focus:ring-2">
 
-        <textarea name="message" placeholder="Escriba su mensaje" required
-                  class="w-full border border-gray-300 rounded-lg p-3 text-base mb-4 resize-y min-h-[120px] focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
-
-        <div class="font-semibold text-center text-gray-700 mb-2">Servicios</div>
-
-        <select name="service" required
-                class="w-full border border-gray-300 rounded-lg p-3 text-base mb-6 bg-white focus:outline-none focus:ring-2 focus:ring-orange-400">
-            <option selected disabled>Seleccione un servicio</option>
-            <option>Educación nutricional</option>
-            <option>Menús personalizados</option>
-            <option>Grupos etáreos</option>
-            <option>Alimentación avanzada para deportistas</option>
+        <select id="motivo" required
+                class="w-full border border-gray-300 rounded-lg p-3 mb-4 bg-white focus:ring-[#f4b183] focus:ring-2">
+            <option selected disabled value="">Motivo de la consulta</option>
+            <option>Consulta sobre productos</option>
+            <option>Personalización de arreglos</option>
+            <option>Evento especial</option>
+            <option>Estado de un pedido</option>
         </select>
 
+        <textarea id="mensaje" rows="4" placeholder="Cuéntanos tu mensaje..." required
+                  class="w-full border border-gray-300 rounded-lg p-3 mb-6 focus:ring-[#f4b183] focus:ring-2"></textarea>
+
         <button type="submit"
-                class="w-full bg-orange-500 text-white font-bold py-3 rounded-lg hover:bg-orange-600 transition">
+                class="w-full bg-[#f4b183] text-white font-bold py-3 rounded-lg hover:bg-[#e89c67] transition">
             Enviar
         </button>
     </form>
 </main>
 
+<!-- MODAL CARGANDO -->
+<div id="modalCargando" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white py-4 px-6 rounded shadow text-center">
+        <p class="font-semibold text-[#d26e4b]">Cargando...</p>
+    </div>
+</div>
+
+<!-- POPUP ÉXITO -->
+<div id="popupExito"
+     class="fixed top-5 right-5 bg-green-600 text-white py-3 px-5 rounded shadow hidden z-50">
+    ✅ Mensaje enviado correctamente
+</div>
+
+<!-- POPUP ERROR -->
+<div id="popupError"
+     class="fixed top-5 right-5 bg-red-600 text-white py-3 px-5 rounded shadow hidden z-50">
+    ❌ Complete todos los campos correctamente
+</div>
+
 <script>
-    // Lógica del menú responsive
-    const menuBtn = document.getElementById('menuBtn');
-    const navMenu = document.getElementById('navMenu');
-    menuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('hidden');
+    // MENU RESPONSIVE
+    $("#menuBtn").click(() => {
+        $("#navMenu").toggleClass("hidden");
     });
 
-    // Envío del formulario
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', e => {
+    // FORMULARIO JQUERY
+    $("#formContacto").submit(function (e) {
         e.preventDefault();
-        alert('Formulario enviado correctamente ✅');
-        form.reset();
+
+        let nombre = $("#nombre").val().trim();
+        let email = $("#email").val().trim();
+        let motivo = $("#motivo").val();
+        let mensaje = $("#mensaje").val().trim();
+
+        if (nombre === "" || email === "" || motivo === "" || mensaje === "") {
+            mostrarPopup("#popupError");
+            return;
+        }
+
+        $("#modalCargando").removeClass("hidden").addClass("flex");
+
+        setTimeout(() => {
+            $("#modalCargando").addClass("hidden").removeClass("flex");
+            mostrarPopup("#popupExito");
+            $("#formContacto")[0].reset();
+        }, 2000);
     });
+
+    function mostrarPopup(id) {
+        $(id).removeClass("hidden");
+        setTimeout(() => {
+            $(id).addClass("hidden");
+        }, 3000);
+    }
 </script>
 
 </body>
