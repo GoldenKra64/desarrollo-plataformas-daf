@@ -4,105 +4,167 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Supernutris - Servicios</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Decoraciones DAF - Productos</title>
+
+    <style>
+        /* Fuerza 3 tarjetas por fila */
+        #grid {
+            display: flex !important;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
 </head>
-<body class="font-sans bg-white">
+
+<body class="font-sans bg-white text-gray-800">
 
 <!-- HEADER -->
-<header class="flex items-center justify-between p-4 bg-[#F2FFEC]">
+<header class="flex items-center justify-between p-4 bg-orange-200">
     <div class="flex items-center space-x-4">
-        <img src="/resources/logo.png" alt="Logo" class="h-12 w-12 object-contain" />
-        <h3 class="text-xl font-bold text-gray-800">SUPERNUTRIS</h3>
+        <img src="/resources/logo.jpeg" class="h-12 w-12 object-contain" />
+        <h3 class="text-xl font-bold text-gray-800">Decoraciones de arreglos florales</h3>
     </div>
     <nav>
         <ul class="flex space-x-6 text-gray-700 font-medium">
-            <li><a href="/index.html" class="hover:text-orange-400">Home</a></li>
-            <li><a href="/routes/services/services.html" class="text-orange-400 font-semibold">Servicios</a></li>
-            <li><a href="/routes/contact/contact.html" class="hover:text-orange-400">Nosotros</a></li>
+            <li><a href="../../index.html" class="hover:text-orange-500">Home</a></li>
+            <li><a href="../services/services.html" class="hover:text-orange-500 font-semibold">Productos</a></li>
+            <li><a href="../../src/contact/contact.html" class="hover:text-orange-500">Contáctanos</a></li>
         </ul>
     </nav>
 </header>
 
 <!-- TÍTULO -->
-<div class="flex flex-col items-center justify-center mt-10 text-green-800">
-    <h1 class="text-3xl font-bold">Nuestros Servicios</h1>
-    <p class="opacity-60">Explora todo lo que tenemos para ti</p>
+<div class="text-center mt-10 text-orange-900">
+    <h1 class="text-3xl font-bold">Nuestros Productos</h1>
+    <p class="opacity-70">Explora todo lo que tenemos para ti</p>
 </div>
 
-<!-- SECCIÓN DE SERVICIOS -->
-<section class="flex justify-center items-center flex-wrap gap-6 my-10 px-4">
-
-    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
-        <img src="/resources/index/healthy_food.png" alt="Nutrición Personalizada" class="w-10 h-10 mb-2" />
-        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición Personalizada</h2>
-        <p>Planes adaptados a tus metas y necesidades.</p>
-    </article>
-
-    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
-        <img src="/resources/index/pregnant-woman.png" alt="Nutrición en el Embarazo" class="w-10 h-10 mb-2" />
-        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición en el Embarazo</h2>
-        <p>Apoyo al desarrollo del bebé y alimentación complementaria.</p>
-    </article>
-
-    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
-        <img src="/resources/index/vegan.png" alt="Nutrición para Vegetarianos" class="w-10 h-10 mb-2" />
-        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición para Vegetarianos</h2>
-        <p>Menús equilibrados adaptados al estilo vegano.</p>
-    </article>
-
-    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
-        <img src="/resources/index/diabetes-care.png" alt="Nutrición para la Diabetes" class="w-10 h-10 mb-2" />
-        <h2 class="text-[25px] font-bold text-green-800 mb-2">Nutrición para la Diabetes</h2>
-        <p>Hábitos saludables para controlar la diabetes.</p>
-    </article>
-
-    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
-        <img src="/resources/services/prioritary.png" alt="Grupos Prioritarios" class="w-10 h-10 mb-2" />
-        <h2 class="text-[25px] font-bold text-green-800 mb-2">Grupos Prioritarios</h2>
-        <p>Planes adaptados a cada etapa de la vida.</p>
-    </article>
-
-    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
-        <img src="/resources/services/sport.jpg" alt="Alimentación Deportiva" class="w-10 h-10 mb-2" />
-        <h2 class="text-[25px] font-bold text-green-800 mb-2">Alimentación Deportiva</h2>
-        <p>Estrategias para mejorar rendimiento y recuperación.</p>
-    </article>
-
-    <article class="w-[250px] h-[300px] bg-[#FFEB9A] p-6 rounded-2xl flex flex-col items-center text-center hover:bg-orange-500 hover:scale-105 transition">
-        <img src="/resources/services/education.png" alt="Educación Nutricional" class="w-10 h-10 mb-2" />
-        <h2 class="text-[25px] font-bold text-green-800 mb-2">Educación Nutricional</h2>
-        <p>Charlas y talleres para hábitos saludables.</p>
-    </article>
+<!-- CONTROLES FILTRO -->
+<section class="max-w-6xl mx-auto px-4 mt-8">
+    <div class="bg-orange-200/60 border border-orange-300 rounded-2xl p-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="col-span-2">
+            <label class="text-sm font-semibold text-orange-900">Buscar producto</label>
+            <input id="q" type="text" placeholder="Nombre o descripción..."
+                   class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400"/>
+        </div>
+        <div>
+            <label class="text-sm font-semibold text-orange-900">Precio min.</label>
+            <input id="pmin" type="number" min="0"
+                   class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400"/>
+        </div>
+        <div>
+            <label class="text-sm font-semibold text-orange-900">Precio max.</label>
+            <input id="pmax" type="number" min="0"
+                   class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400"/>
+        </div>
+    </div>
 </section>
 
-<!-- BOTÓN DETALLES -->
-<div class="flex justify-center my-8">
-    <a href="/routes/details/details.html"
-       class="px-5 py-2.5 text-[18px] bg-orange-500 text-white rounded
-              no-underline hover:bg-orange-600 transition duration-200">
-        Más Detalles
-    </a>
+<!-- LOADING -->
+<div id="loading" class="max-w-6xl mx-auto px-4 my-16">
+    <div class="bg-[#FDCB80] rounded-2xl p-8 shadow text-center text-orange-900 animate-pulse">
+        <div class="text-5xl mb-2">⏳</div>
+        <p class="text-lg font-semibold">Cargando...</p>
+        <p class="text-sm opacity-80">Preparando productos...</p>
+    </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="bg-[#F2FFEC] text-black justify-around items-center">
-    <div class="flex gap-5 justify-around items-center py-5">
-        <section class="flex flex-col items-center">
-            <img src="/resources/logo.png" alt="Logo" class="w-32 h-32 mb-2"/>
-            <h1 class="text-2xl font-bold text-green-900">SUPERNUTRIS</h1>
-        </section>
-        <section class="flex flex-col items-center text-center">
-            <img src="/resources/location.png" alt="Ubicación" class="w-8 h-8 mb-2" />
-            <h1 class="text-lg font-bold mb-1">Ubícanos</h1>
-            <a href="https://maps.app.goo.gl/y4ZXL5yssfoZAuLs8" class="text-green-900 underline">
-                Zamora Oe3-33 y Edmundo Chiriboga
-            </a>
-        </section>
+<!-- GRID DE PRODUCTOS -->
+<section id="grid" class="max-w-6xl mx-auto px-4 my-10 hidden"></section>
+
+<!-- JS -->
+<script>
+    const PRODUCTS = [
+        { title:"Bouquets de flores", price:18, img:"/resources/details/bouquet.jpg", desc:"Arreglos elegantes y versátiles." },
+        { title:"Cajas de rosas", price:28, img:"/resources/details/caja_rosas.jpeg", desc:"Presentación elegante y duradera." },
+        { title:"Coronas florales", price:45, img:"/resources/details/corona_flores.jpg", desc:"Diseños solemnes y armoniosos." },
+        { title:"Peceras florales", price:22, img:"/resources/details/pecera_flores.jpg", desc:"Composición moderna en vidrio." },
+        { title:"Pedestales con flores", price:55, img:"/resources/details/pedestal_flores.jpg", desc:"Arreglos altos e imponentes." },
+        { title:"Arreglos simples", price:12, img:"/resources/details/arreglos_simples.jpeg", desc:"Opciones económicas y bonitas." },
+        { title:"Canastos florales", price:25, img:"/resources/details/canasto_flores.jpg", desc:"Estilo cálido y campestre." },
+        { title:"Centros de mesa", price:30, img:"/resources/details/centros_mesa.jpg", desc:"Altura perfecta para invitados." }
+    ];
+
+    // CARD CUADRADA
+    const card = (p) => `
+<article class="w-[250px] h-[300px] bg-[#FDCB80] p-6 rounded-2xl
+               flex flex-col justify-between items-center text-center
+               shadow hover:shadow-lg hover:scale-105 transition">
+
+    <div class="w-full h-[120px] flex items-center justify-center rounded-lg overflow-hidden bg-white">
+        <img src="${p.img}" class="h-full object-contain"/>
     </div>
-    <div class="bg-green-800 w-full h-[40px] flex justify-center items-center text-white">
-        © Todos los derechos reservados
+
+    <div>
+        <h2 class="text-[17px] font-bold text-orange-900 leading-tight">${p.title}</h2>
+        <p class="text-[12px] text-orange-900/80 leading-tight">${p.desc}</p>
+    </div>
+
+    <div class="flex justify-between items-center w-full text-[14px]">
+        <span class="font-semibold text-orange-700">$${p.price}</span>
+        <a href="../details/details.html"
+           class="px-3 py-1 bg-orange-500 text-white rounded-sm text-xs hover:bg-orange-600">
+            Ver más
+        </a>
+    </div>
+
+</article>`;
+
+    // ESTADO DE FILTRO
+    let state = { q:"", pmin:null, pmax:null };
+
+    function filtrar(){
+        return PRODUCTS.filter(p=>{
+            const qOk = !state.q || p.title.toLowerCase().includes(state.q) || p.desc.toLowerCase().includes(state.q);
+            const minOk = !state.pmin || p.price >= state.pmin;
+            const maxOk = !state.pmax || p.price <= state.pmax;
+            return qOk && minOk && maxOk;
+        });
+    }
+
+    function render(list){
+        const $g = $("#grid");
+        if(!list.length){
+            $g.html('<div class="text-center text-orange-900 font-semibold w-full">Sin resultados</div>');
+            return;
+        }
+        $g.html(list.map(card).join(""));
+    }
+
+    // INICIO
+    $(function(){
+        setTimeout(()=>{
+            $("#loading").hide();
+            $("#grid").show();
+            render(PRODUCTS);
+        },2000);
+
+        $("#q").on("input",e=>{ state.q = e.target.value.toLowerCase(); render(filtrar()); });
+        $("#pmin").on("input",e=>{ state.pmin = Number(e.target.value)||null; render(filtrar()); });
+        $("#pmax").on("input",e=>{ state.pmax = Number(e.target.value)||null; render(filtrar()); });
+    });
+</script>
+<!--Pie de pagina-->
+<!-- Footer -->
+<footer id="contacto" class="bg-[#f4b183] text-white py-8">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-6">
+        <div class="flex flex-col items-center gap-3">
+            <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
+            <div class="flex gap-4">
+                <img src="/resources/footer/facebook.png" alt="Facebook" class="w-6 h-6 cursor-pointer">
+                <img src="/resources/footer/messenger.png" alt="Messenger" class="w-6 h-6 cursor-pointer">
+                <img src="/resources/footer/whatsapp.png" alt="WhatsApp" class="w-6 h-6 cursor-pointer">
+            </div>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-2">📞 Contactos</h4>
+            <p>+593 000000000</p>
+            <p>+593 000000000</p>
+            <p>dafdecoraciones@gmail.com</p>
+        </div>
     </div>
 </footer>
-
 </body>
 </html>

@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>DAF - Detalles de productos</title>
 </head>
 <body class="font-sans bg-white text-gray-800">
 
 <!--header-->
-<header class="flex items-center justify-between p-4 bg-orange-200">
-    <div class="flex items-center space-x-4">
-        <img src="/resources/logo.jpeg" alt="Logo DAF" class="h-12 w-12 object-contain"/>
-        <h3 class="text-xl font-bold text-gray-800">Decoraciones de arreglos florales</h3>
+<header class="bg-[#f4b183] flex items-center justify-between px-6 py-3 shadow">
+    <div class="flex items-center gap-3">
+        <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
+        <h1 class="text-white font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
     </div>
-    <nav>
-        <ul class="flex space-x-6 text-gray-700 font-medium">
-            <li><a href="/index.html" class="hover:text-orange-500">Home</a></li>
-            <li><a href="/routes/services/services.html" class="hover:text-orange-500">Productos</a></li>
-            <li><a href="/routes/contact/contact.html" class="hover:text-orange-500">Nosotros</a></li>
-        </ul>
+    <nav class="flex items-center gap-6 text-white font-medium">
+        <a href="../../index.html" class="hover:underline">Home</a>
+        <a href="../services/services.html" class="hover:underline">Productos</a>
+        <a href="#contacto" class="hover:underline">Contáctanos</a>
+        <a href="../../src/carrito/carrito.html" class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
+            🛒
+        </a>
     </nav>
 </header>
 
@@ -295,22 +296,23 @@
 </section>
 
 <!--Pie de pagina-->
-<footer class="bg-[#FCD4AD] text-black">
-    <div class="flex flex-col md:flex-row gap-6 justify-around items-center py-5">
-        <section class="flex flex-col items-center">
-            <img src="/resources/logo.jpeg" alt="Logo DAF" class="w-28 h-28 mb-2"/>
-            <h1 class="text-xl font-bold text-gray-800">Decoraciones DAF</h1>
-        </section>
-        <section class="flex flex-col items-center text-center">
-            <img src="/resources/location.png" alt="Ubicación" class="w-8 h-8 mb-2"/>
-            <h1 class="text-lg font-bold mb-1">Ubícanos</h1>
-            <a href="https://maps.app.goo.gl/y4ZXL5yssfoZAuLs8" class="text-green-900 underline hover:text-green-700">
-                Zamora Oe3-33 y Edmundo Chiriboga
-            </a>
-        </section>
-    </div>
-    <div class="bg-orange-800 w-full h-[40px] flex justify-center items-center text-white">
-        © Todos los derechos reservados
+<!-- Footer -->
+<footer id="contacto" class="bg-[#f4b183] text-white py-8">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-6">
+        <div class="flex flex-col items-center gap-3">
+            <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
+            <div class="flex gap-4">
+                <img src="/resources/footer/facebook.png" alt="Facebook" class="w-6 h-6 cursor-pointer">
+                <img src="/resources/footer/messenger.png" alt="Instagram" class="w-6 h-6 cursor-pointer">
+                <img src="/resources/footer/whatsapp.png" alt="WhatsApp" class="w-6 h-6 cursor-pointer">
+            </div>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-2">📞 Contactos</h4>
+            <p>+593 000000000</p>
+            <p>+593 000000000</p>
+            <p>dafdecoraciones@gmail.com</p>
+        </div>
     </div>
 </footer>
 </body>
