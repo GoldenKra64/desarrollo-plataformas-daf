@@ -10,28 +10,7 @@
  * - Calcular el total del carrito con una función
  */
 
-const producto = [
-    {
-        id: 1,
-        nombre: "Arreglos simples",
-        descripcion: "Diseños frescos y delicados, ideales para regalar o decorar espacios con un toque natural y armonioso.",
-        image: "/resources/details/arreglos_simples.jpeg",
-        precio: 12,
-        cantidad: 8
-    },
-    {
-        id: 2,
-        nombre: "Centro de mesas",
-        descripcion: "Centro de mesas",
-        image: "/resources/details/centros_mesa.jpg",
-        precio: 24.99,
-        cantidad: 2
-    }
-]
-
-//localStorage.setItem('producto', JSON.stringify(producto));
-
-const carritoProductos = JSON.parse(localStorage.getItem('producto'));
+const carritoProductos = JSON.parse(localStorage.getItem('carrito'));
 
 $(document).ready(function() {
     if (carritoProductos && carritoProductos.length > 0) {
@@ -89,32 +68,32 @@ $(document).ready(function() {
 });
 
 const deleteProduct = (id) => {
-    let carrito = JSON.parse(localStorage.getItem('producto')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito = carrito.filter(prod => prod.id !== id);
-    localStorage.setItem('producto', JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito));
     location.reload();
 }
 
 const updateQty = (id, nuevaQty) => {
-    let carrito = JSON.parse(localStorage.getItem('producto')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const index = carrito.findIndex(prod => prod.id === id);
 
     if (index !== -1) {
         carrito[index].cantidad = parseInt(nuevaQty);
-        localStorage.setItem('producto', JSON.stringify(carrito));
+        localStorage.setItem('carrito', JSON.stringify(carrito));
         updateSubtotalIndividual(id);
     }
 }
 
 const recalcularSubtotalIndividual = (id) => {
-    let carrito = JSON.parse(localStorage.getItem('producto')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const index = carrito.findIndex(prod => prod.id === id);
     const subtotal = carrito[index].precio * carrito[index].cantidad;
     return subtotal;
 }
 
 const updateSubtotalIndividual = (id) => {
-    let carrito = JSON.parse(localStorage.getItem('producto')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const index = carrito.findIndex(prod => prod.id === id);
 
     if (index !== -1) {
@@ -126,7 +105,7 @@ const updateSubtotalIndividual = (id) => {
 
 const updateTotalGeneral = () => {
     let total = 0;
-    let carrito = JSON.parse(localStorage.getItem('producto')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     for (let prod of carrito) {
         total += prod.precio * prod.cantidad;

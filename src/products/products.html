@@ -21,19 +21,20 @@
 <body class="font-sans bg-white text-gray-800">
 
 <!-- HEADER -->
-<header class="flex items-center justify-between p-4 bg-orange-200">
-    <div class="flex items-center space-x-4">
-        <img src="/resources/logo.jpeg" class="h-12 w-12 object-contain" />
-        <h3 class="text-xl font-bold text-gray-800">Decoraciones de arreglos florales</h3>
+  <header class="bg-[#f4b183] flex items-center justify-between px-6 py-3 shadow">
+    <div class="flex items-center gap-3">
+      <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
+      <h1 class="text-white font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
     </div>
-    <nav>
-        <ul class="flex space-x-6 text-gray-700 font-medium">
-            <li><a href="../../index.html" class="hover:text-orange-500">Home</a></li>
-            <li><a href="../services/services.html" class="hover:text-orange-500 font-semibold">Productos</a></li>
-            <li><a href="../../src/contact/contact.html" class="hover:text-orange-500">Contáctanos</a></li>
-        </ul>
+    <nav class="flex items-center gap-6 text-white font-medium">
+      <a href="/index.html" class="hover:underline">Home</a>
+      <a href="#" class="hover:underline">Productos</a>
+      <a href="/src/contact/contact.html" class="hover:underline">Contáctanos</a>
+      <a href="/src/carrito/carrito.html" class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
+        🛒
+      </a>
     </nav>
-</header>
+  </header>
 
 <!-- TÍTULO -->
 <div class="text-center mt-10 text-orange-900">
@@ -76,16 +77,7 @@
 
 <!-- JS -->
 <script>
-    const PRODUCTS = [
-        { title:"Bouquets de flores", price:18, img:"/resources/details/bouquet.jpg", desc:"Arreglos elegantes y versátiles." },
-        { title:"Cajas de rosas", price:28, img:"/resources/details/caja_rosas.jpeg", desc:"Presentación elegante y duradera." },
-        { title:"Coronas florales", price:45, img:"/resources/details/corona_flores.jpg", desc:"Diseños solemnes y armoniosos." },
-        { title:"Peceras florales", price:22, img:"/resources/details/pecera_flores.jpg", desc:"Composición moderna en vidrio." },
-        { title:"Pedestales con flores", price:55, img:"/resources/details/pedestal_flores.jpg", desc:"Arreglos altos e imponentes." },
-        { title:"Arreglos simples", price:12, img:"/resources/details/arreglos_simples.jpeg", desc:"Opciones económicas y bonitas." },
-        { title:"Canastos florales", price:25, img:"/resources/details/canasto_flores.jpg", desc:"Estilo cálido y campestre." },
-        { title:"Centros de mesa", price:30, img:"/resources/details/centros_mesa.jpg", desc:"Altura perfecta para invitados." }
-    ];
+    const products = JSON.parse(localStorage.getItem("products"));
 
     // CARD CUADRADA
     const card = (p) => `
@@ -94,16 +86,16 @@
                shadow hover:shadow-lg hover:scale-105 transition">
 
     <div class="w-full h-[120px] flex items-center justify-center rounded-lg overflow-hidden bg-white">
-        <img src="${p.img}" class="h-full object-contain"/>
+        <img src="${p.image}" class="h-full object-contain"/>
     </div>
 
     <div>
-        <h2 class="text-[17px] font-bold text-orange-900 leading-tight">${p.title}</h2>
-        <p class="text-[12px] text-orange-900/80 leading-tight">${p.desc}</p>
+        <h2 class="text-[17px] font-bold text-orange-900 leading-tight">${p.nombre}</h2>
+        <p class="text-[12px] text-orange-900/80 leading-tight">${p.descripcion}</p>
     </div>
 
     <div class="flex justify-between items-center w-full text-[14px]">
-        <span class="font-semibold text-orange-700">$${p.price}</span>
+        <span class="font-semibold text-orange-700">$${p.precio}</span>
         <a href="../details/details.html"
            class="px-3 py-1 bg-orange-500 text-white rounded-sm text-xs hover:bg-orange-600">
             Ver más
@@ -116,7 +108,7 @@
     let state = { q:"", pmin:null, pmax:null };
 
     function filtrar(){
-        return PRODUCTS.filter(p=>{
+        return products.filter(p=>{
             const qOk = !state.q || p.title.toLowerCase().includes(state.q) || p.desc.toLowerCase().includes(state.q);
             const minOk = !state.pmin || p.price >= state.pmin;
             const maxOk = !state.pmax || p.price <= state.pmax;
@@ -125,12 +117,17 @@
     }
 
     function render(list){
+        console.log("Renderizando productos:", list);
         const $g = $("#grid");
-        if(!list.length){
+        if(!list){
             $g.html('<div class="text-center text-orange-900 font-semibold w-full">Sin resultados</div>');
             return;
         }
-        $g.html(list.map(card).join(""));
+
+        $g.html("");
+        for (prod of list) {
+            $g.append(card(prod));
+        }
     }
 
     // INICIO
@@ -138,7 +135,7 @@
         setTimeout(()=>{
             $("#loading").hide();
             $("#grid").show();
-            render(PRODUCTS);
+            render(products);
         },2000);
 
         $("#q").on("input",e=>{ state.q = e.target.value.toLowerCase(); render(filtrar()); });
