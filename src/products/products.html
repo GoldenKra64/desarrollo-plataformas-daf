@@ -109,9 +109,9 @@
 
     function filtrar(){
         return products.filter(p=>{
-            const qOk = !state.q || p.title.toLowerCase().includes(state.q) || p.desc.toLowerCase().includes(state.q);
-            const minOk = !state.pmin || p.price >= state.pmin;
-            const maxOk = !state.pmax || p.price <= state.pmax;
+            const qOk = !state.q || p.nombre.toLowerCase().includes(state.q) || p.descripcion.toLowerCase().includes(state.q);
+            const minOk = !state.pmin || p.precio >= state.pmin;
+            const maxOk = !state.pmax || p.precio <= state.pmax;
             return qOk && minOk && maxOk;
         });
     }
