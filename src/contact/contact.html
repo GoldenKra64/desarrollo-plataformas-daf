@@ -80,27 +80,28 @@
         $("#navMenu").toggleClass("hidden");
     });
 
-    // FORMULARIO JQUERY
+    // ✅ VALIDACIÓN FORMULARIO EXACTA COMO EL DIBUJO
     $("#formContacto").submit(function (e) {
         e.preventDefault();
 
-        let nombre = $("#nombre").val().trim();
-        let email = $("#email").val().trim();
-        let motivo = $("#motivo").val();
-        let mensaje = $("#mensaje").val().trim();
+        var form_el = $("#formContacto");
+
+        var nombre = form_el.find("#nombre").val().trim();
+        var email = form_el.find("#email").val().trim();
+        var motivo = form_el.find("#motivo").val();
+        var mensaje = form_el.find("#mensaje").val().trim();
 
         if (nombre === "" || email === "" || motivo === "" || mensaje === "") {
-            mostrarPopup("#popupError");
-            return;
+            mostrarPopup("#popupError"); // ❌ MENSAJE ERROR
+        } else {
+            $("#modalCargando").removeClass("hidden").addClass("flex");
+
+            setTimeout(() => {
+                $("#modalCargando").addClass("hidden").removeClass("flex");
+                mostrarPopup("#popupExito"); // ✅ CONTINÚA
+                form_el[0].reset();
+            }, 2000);
         }
-
-        $("#modalCargando").removeClass("hidden").addClass("flex");
-
-        setTimeout(() => {
-            $("#modalCargando").addClass("hidden").removeClass("flex");
-            mostrarPopup("#popupExito");
-            $("#formContacto")[0].reset();
-        }, 2000);
     });
 
     function mostrarPopup(id) {
@@ -110,6 +111,3 @@
         }, 3000);
     }
 </script>
-
-</body>
-</html>
