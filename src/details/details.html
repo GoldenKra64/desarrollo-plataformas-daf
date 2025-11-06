@@ -9,20 +9,20 @@
 <body class="font-sans bg-white text-gray-800">
 
 <!--header-->
-<header class="bg-[#f4b183] flex items-center justify-between px-6 py-3 shadow">
+  <header class="bg-[#f4b183] flex items-center justify-between px-6 py-3 shadow">
     <div class="flex items-center gap-3">
-        <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
-        <h1 class="text-white font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
+      <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
+      <h1 class="text-white font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
     </div>
     <nav class="flex items-center gap-6 text-white font-medium">
-        <a href="../../index.html" class="hover:underline">Home</a>
-        <a href="../services/services.html" class="hover:underline">Productos</a>
-        <a href="#contacto" class="hover:underline">Contáctanos</a>
-        <a href="../../src/carrito/carrito.html" class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
-            🛒
-        </a>
+      <a href="/index.html" class="hover:underline">Home</a>
+      <a href="/src/products/products.html" class="hover:underline">Productos</a>
+      <a href="/src/contact/contact.html" class="hover:underline">Contáctanos</a>
+      <a href="/src/carrito/carrito.html" class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
+        🛒
+      </a>
     </nav>
-</header>
+  </header>
 
 <!--Titulo detalles-->
 <div class="max-w-6xl mx-auto px-4 mt-8 text-center">
@@ -31,7 +31,7 @@
 </div>
 
 <!--Listado de detalles-->
-<section class="max-w-6xl mx-auto px-4 my-10 space-y-8">
+<section class="max-w-6xl mx-auto px-4 my-10 space-y-8" id="products">
     <!-- Bouquets de flores -->
     <article class="bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition">
         <div class="flex flex-col md:flex-row gap-6 items-start">
@@ -59,8 +59,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $18</span>
-                    <a href="/routes/contact/contact.html?producto=Bouquet"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(1)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -94,8 +94,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $28</span>
-                    <a href="/routes/contact/contact.html?producto=Caja%20de%20rosas"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(2)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -129,8 +129,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $45</span>
-                    <a href="/routes/contact/contact.html?producto=Corona%20floral"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(3)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -164,8 +164,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $22</span>
-                    <a href="/routes/contact/contact.html?producto=Pecera%20floral"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(3)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -194,8 +194,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $55</span>
-                    <a href="/routes/contact/contact.html?producto=Pedestal"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(4)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -224,8 +224,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $12</span>
-                    <a href="/routes/contact/contact.html?producto=Arreglo%20simple"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(5)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -254,8 +254,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $25</span>
-                    <a href="/routes/contact/contact.html?producto=Canasto"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(6)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -284,8 +284,8 @@
 
                 <div class="mt-5 flex items-center justify-between">
                     <span class="text-xl md:text-2xl font-semibold text-orange-700">Desde $30</span>
-                    <a href="/routes/contact/contact.html?producto=Centro%20de%20mesa"
-                       class="inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
+                    <a onclick="addProductToCart(7)"
+                       class="cursor-pointer inline-flex items-center justify-center px-4 py-2 rounded bg-orange-500 text-white font-medium hover:bg-orange-600 transition">
                         Solicitar este producto
                     </a>
                 </div>
@@ -314,6 +314,7 @@
             <p>dafdecoraciones@gmail.com</p>
         </div>
     </div>
+    <script src="detail.js"></script>
 </footer>
 </body>
 </html>
