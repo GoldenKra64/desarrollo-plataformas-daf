@@ -5,65 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="services.js" defer></script>
+
     <title>Decoraciones DAF - Productos</title>
 
+    <!-- Estilos -->
     <style>
-        /* Fuerza 3 tarjetas por fila */
-        #grid {
-            display: flex !important;
-            flex-wrap: wrap;
-            justify-content: center;
+        /* Contenedor principal */
+        #products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            justify-items: center;
+            align-items: start;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body class="font-sans bg-white text-gray-800">
-
-<!-- HEADER -->
-  <header class="bg-[#f4b183] flex items-center justify-between px-6 py-3 shadow">
-    <div class="flex items-center gap-3">
-      <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
-      <h1 class="text-white font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
+<!-- Encabezado -->
+<header class="flex items-center justify-between p-4 bg-orange-200">
+    <!-- LOGO Y NOMBRE DE NEGOCIO -->
+    <div class="flex items-center space-x-4">
+        <img src="/resources/logo.jpeg" class="h-12 w-12 object-contain" alt="Logo DAF" />
+        <h3 class="text-xl font-bold text-gray-800">Decoraciones de arreglos florales</h3>
     </div>
-    <nav class="flex items-center gap-6 text-white font-medium">
-      <a href="../../index.html" class="hover:underline">Home</a>
-      <a href="#" class="hover:underline">Productos</a>
-      <a href="../contact/contact.html" class="hover:underline">Contáctanos</a>
-      <a href="../carrito/carrito.html" class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
-        🛒
-      </a>
-    </nav>
-  </header>
 
-<!-- TÍTULO -->
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul class="flex space-x-6 text-gray-700 font-medium">
+            <li><a href="../../index.html" class="hover:text-orange-500">Home</a></li>
+            <li><a href="products.html" class="hover:text-orange-500 font-semibold">Productos</a></li>
+            <li><a href="../contact/contact.html" class="hover:text-orange-500">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Título Principal -->
 <div class="text-center mt-10 text-orange-900">
     <h1 class="text-3xl font-bold">Nuestros Productos</h1>
     <p class="opacity-70">Explora todo lo que tenemos para ti</p>
 </div>
 
-<!-- CONTROLES FILTRO -->
+<!-- Filtros -->
 <section class="max-w-6xl mx-auto px-4 mt-8">
     <div class="bg-orange-200/60 border border-orange-300 rounded-2xl p-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <!-- Campo de búsqueda general -->
         <div class="col-span-2">
-            <label class="text-sm font-semibold text-orange-900">Buscar producto</label>
-            <input id="q" type="text" placeholder="Nombre o descripción..."
-                   class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400"/>
+            <label class="text-sm font-semibold text-orange-900">Buscar</label>
+            <input id="q" type="text" class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400" />
         </div>
+
+        <!-- Precio mínimo -->
         <div>
             <label class="text-sm font-semibold text-orange-900">Precio min.</label>
-            <input id="pmin" type="number" min="0"
-                   class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400"/>
+            <input id="pmin" type="number" min="0" class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400" />
         </div>
+
+        <!-- Precio máximo -->
         <div>
             <label class="text-sm font-semibold text-orange-900">Precio max.</label>
-            <input id="pmax" type="number" min="0"
-                   class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400"/>
+            <input id="pmax" type="number" min="0" class="mt-1 w-full rounded-xl border px-3 py-2 focus:ring-2 focus:ring-orange-400" />
         </div>
     </div>
 </section>
 
-<!-- LOADING -->
+<!-- Mensaje de Carga -->
 <div id="loading" class="max-w-6xl mx-auto px-4 my-16">
     <div class="bg-[#FDCB80] rounded-2xl p-8 shadow text-center text-orange-900 animate-pulse">
         <div class="text-5xl mb-2">⏳</div>
@@ -72,86 +80,18 @@
     </div>
 </div>
 
-<!-- GRID DE PRODUCTOS -->
-<section id="grid" class="max-w-6xl mx-auto px-4 my-10 hidden"></section>
+<!-- Contenedor de Productos -->
+<section id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 my-10">
+    <!-- Las tarjetas se generan dinámicamente con JavaScript -->
+</section>
 
-<!-- JS -->
-<script>
-    const products = JSON.parse(localStorage.getItem("products"));
-
-    // CARD CUADRADA
-    const card = (p) => `
-<article class="w-[250px] h-[300px] bg-[#FDCB80] p-6 rounded-2xl
-               flex flex-col justify-between items-center text-center
-               shadow hover:shadow-lg hover:scale-105 transition">
-
-    <div class="w-full h-[120px] flex items-center justify-center rounded-lg overflow-hidden bg-white">
-        <img src="${p.image}" class="h-full object-contain"/>
-    </div>
-
-    <div>
-        <h2 class="text-[17px] font-bold text-orange-900 leading-tight">${p.nombre}</h2>
-        <p class="text-[12px] text-orange-900/80 leading-tight">${p.descripcion}</p>
-    </div>
-
-    <div class="flex justify-between items-center w-full text-[14px]">
-        <span class="font-semibold text-orange-700">$${p.precio}</span>
-        <a href="../details/details.html"
-           class="px-3 py-1 bg-orange-500 text-white rounded-sm text-xs hover:bg-orange-600">
-            Ver más
-        </a>
-    </div>
-
-</article>`;
-
-    // ESTADO DE FILTRO
-    let state = { q:"", pmin:null, pmax:null };
-
-    function filtrar(){
-        return products.filter(p=>{
-            const qOk = !state.q || p.nombre.toLowerCase().includes(state.q) || p.descripcion.toLowerCase().includes(state.q);
-            const minOk = !state.pmin || p.precio >= state.pmin;
-            const maxOk = !state.pmax || p.precio <= state.pmax;
-            return qOk && minOk && maxOk;
-        });
-    }
-
-    function render(list){
-        console.log("Renderizando productos:", list);
-        const $g = $("#grid");
-        if(!list){
-            $g.html('<div class="text-center text-orange-900 font-semibold w-full">Sin resultados</div>');
-            return;
-        }
-
-        $g.html("");
-        for (prod of list) {
-            $g.append(card(prod));
-        }
-    }
-
-    // INICIO
-    $(function(){
-        setTimeout(()=>{
-            $("#loading").hide();
-            $("#grid").show();
-            render(products);
-        },2000);
-
-        $("#q").on("input",e=>{ state.q = e.target.value.toLowerCase(); render(filtrar()); });
-        $("#pmin").on("input",e=>{ state.pmin = Number(e.target.value)||null; render(filtrar()); });
-        $("#pmax").on("input",e=>{ state.pmax = Number(e.target.value)||null; render(filtrar()); });
-    });
-</script>
-<!--Pie de pagina-->
-<!-- Footer -->
 <footer id="contacto" class="bg-[#f4b183] text-white py-8">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-6">
         <div class="flex flex-col items-center gap-3">
             <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
             <div class="flex gap-4">
                 <img src="/resources/footer/facebook.png" alt="Facebook" class="w-6 h-6 cursor-pointer">
-                <img src="/resources/footer/messenger.png" alt="Messenger" class="w-6 h-6 cursor-pointer">
+                <img src="/resources/footer/messenger.png" alt="Instagram" class="w-6 h-6 cursor-pointer">
                 <img src="/resources/footer/whatsapp.png" alt="WhatsApp" class="w-6 h-6 cursor-pointer">
             </div>
         </div>
@@ -163,5 +103,3 @@
         </div>
     </div>
 </footer>
-</body>
-</html>

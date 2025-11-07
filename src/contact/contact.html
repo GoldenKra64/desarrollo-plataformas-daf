@@ -18,7 +18,7 @@
     <nav class="flex items-center gap-6 text-white font-medium">
       <a href="../../index.html" class="hover:underline">Home</a>
       <a href="../products/products.html" class="hover:underline">Productos</a>
-      <a href="#" class="hover:underline">Contáctanos</a>
+      <a href="contact.html" class="hover:underline">Contáctanos</a>
       <a href="../carrito/carrito.html" class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
         🛒
       </a>
@@ -49,7 +49,7 @@
                   class="w-full border border-gray-300 rounded-lg p-3 mb-6 focus:ring-[#f4b183] focus:ring-2"></textarea>
 
         <button type="submit"
-                class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 w-full">
+                class="w-full bg-[#f4b183] text-white font-bold py-3 rounded-lg hover:bg-[#e89c67] transition">
             Enviar
         </button>
     </form>
@@ -80,28 +80,27 @@
         $("#navMenu").toggleClass("hidden");
     });
 
-    // ✅ VALIDACIÓN FORMULARIO EXACTA COMO EL DIBUJO
+    // FORMULARIO JQUERY
     $("#formContacto").submit(function (e) {
         e.preventDefault();
 
-        var form_el = $("#formContacto");
-
-        var nombre = form_el.find("#nombre").val().trim();
-        var email = form_el.find("#email").val().trim();
-        var motivo = form_el.find("#motivo").val();
-        var mensaje = form_el.find("#mensaje").val().trim();
+        let nombre = $("#nombre").val().trim();
+        let email = $("#email").val().trim();
+        let motivo = $("#motivo").val();
+        let mensaje = $("#mensaje").val().trim();
 
         if (nombre === "" || email === "" || motivo === "" || mensaje === "") {
-            mostrarPopup("#popupError"); // ❌ MENSAJE ERROR
-        } else {
-            $("#modalCargando").removeClass("hidden").addClass("flex");
-
-            setTimeout(() => {
-                $("#modalCargando").addClass("hidden").removeClass("flex");
-                mostrarPopup("#popupExito"); // ✅ CONTINÚA
-                form_el[0].reset();
-            }, 2000);
+            mostrarPopup("#popupError");
+            return;
         }
+
+        $("#modalCargando").removeClass("hidden").addClass("flex");
+
+        setTimeout(() => {
+            $("#modalCargando").addClass("hidden").removeClass("flex");
+            mostrarPopup("#popupExito");
+            $("#formContacto")[0].reset();
+        }, 2000);
     });
 
     function mostrarPopup(id) {
@@ -111,3 +110,6 @@
         }, 3000);
     }
 </script>
+
+</body>
+</html>
