@@ -77,6 +77,7 @@ function aplicarFiltro() {
 }
 
 // Render tarjetas
+/*
 function renderProductos(lista) {
     productElement.innerHTML = "";
 
@@ -106,12 +107,15 @@ function renderProductos(lista) {
         productElement.appendChild(element);
     });
 }
+*/
+
+const view = new ProductView();
 
 // Simulación de carga asíncrona
 setTimeout(() => {
     loading.style.display = "none";
     productElement.style.display = "grid";
-    renderProductos(floralproducts);
+    view.renderProducts(floralproducts);
 }, 2000);
 
 // Eventos filtros
