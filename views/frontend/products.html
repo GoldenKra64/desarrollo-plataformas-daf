@@ -6,7 +6,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../../views/ProductView.js" defer></script>
-    <script src="products.js" defer></script>
+    <script src="../../public/js/products.js" defer></script>
+    <link rel="stylesheet" href="../../public/css/body.css"/>
 
     <title>Decoraciones DAF - Productos</title>
 
@@ -26,21 +27,18 @@
 
 <body class="font-sans bg-white text-gray-800">
 <!-- Encabezado -->
-<header class="flex items-center justify-between p-4 bg-orange-200">
-    <!-- LOGO Y NOMBRE DE NEGOCIO -->
-    <div class="flex items-center space-x-4">
-        <img src="/resources/logo.jpeg" class="h-12 w-12 object-contain" alt="Logo DAF" />
-        <h3 class="text-xl font-bold text-gray-800">Decoraciones de arreglos florales</h3>
-    </div>
+<header>
+  <div class="logo-area">
+    <img src="../../public/images/logo.jpeg" alt="DAF Logo">
+    <h1>Decoraciones de Arreglos Florales</h1>
+  </div>
 
-    <!-- Menú de Navegación -->
-    <nav>
-        <ul class="flex space-x-6 text-gray-700 font-medium">
-            <li><a href="../../index.html" class="hover:text-orange-500">Home</a></li>
-            <li><a href="products.html" class="hover:text-orange-500 font-semibold">Productos</a></li>
-            <li><a href="../contact/contact.html" class="hover:text-orange-500">Contáctanos</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Productos</a>
+    <a href="contact.html">Contáctanos</a>
+    <a href="carrito.html" class="cart-btn">🛒</a>
+  </nav>
 </header>
 
 <!-- Título Principal -->
@@ -86,21 +84,25 @@
     <!-- Las tarjetas se generan dinámicamente con JavaScript -->
 </section>
 
-<footer id="contacto" class="bg-[#f4b183] text-white py-8">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-6">
-        <div class="flex flex-col items-center gap-3">
-            <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
-            <div class="flex gap-4">
-                <img src="/resources/footer/facebook.png" alt="Facebook" class="w-6 h-6 cursor-pointer">
-                <img src="/resources/footer/messenger.png" alt="Instagram" class="w-6 h-6 cursor-pointer">
-                <img src="/resources/footer/whatsapp.png" alt="WhatsApp" class="w-6 h-6 cursor-pointer">
+<footer id="contacto">
+    <div class="footer-container">
+
+        <div class="brand-section">
+            <img src="../../public/images/logo.jpeg" alt="DAF Logo" class="logo">
+
+            <div class="social-icons">
+                <img src="../../public/images/footer/facebook.png" alt="Facebook">
+                <img src="../../public/images/footer/messenger.png" alt="Instagram">
+                <img src="../../public/images/footer/whatsapp.png" alt="WhatsApp">
             </div>
         </div>
-        <div>
-            <h4 class="font-semibold text-lg mb-2">📞 Contactos</h4>
+
+        <div class="contact-section">
+            <h4>📞 Contactos</h4>
             <p>+593 000000000</p>
             <p>+593 000000000</p>
             <p>dafdecoraciones@gmail.com</p>
         </div>
+
     </div>
 </footer>

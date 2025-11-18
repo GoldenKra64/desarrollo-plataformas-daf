@@ -6,20 +6,20 @@
   <title>DAF - Decoración Arreglos Florales</title>
   <link rel="stylesheet" href="/body.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../public/css/body.css"/>
 </head>
 <body class="font-sans bg-[#fff7f2] text-gray-800">
-  <header class="bg-[#f4b183] flex items-center justify-between px-6 py-3 shadow">
-    <div class="flex items-center gap-3">
-      <img src="../../public/images/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
-      <h1 class="text-white font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
+  <header>
+    <div class="logo-area">
+      <img src="../../public/images/logo.jpeg" alt="DAF Logo">
+      <h1>Decoraciones de Arreglos Florales</h1>
     </div>
-    <nav class="flex items-center gap-6 text-white font-medium">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="src/products/products.html" class="hover:underline">Productos</a>
-      <a href="src/contact/contact.html" class="hover:underline">Contáctanos</a>
-      <a href="src/carrito/carrito.html" class="bg-white text-[#f4b183] p-2 rounded-full shadow hover:bg-[#ffe8d6]">
-        🛒
-      </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Productos</a>
+      <a href="contact.html">Contáctanos</a>
+      <a href="carrito.html" class="cart-btn">🛒</a>
     </nav>
   </header>
 
@@ -36,7 +36,7 @@
         En DAF creemos que cada arreglo cuenta una historia, y queremos ser parte de la tuya.
       </p>
       <div class="flex gap-4">
-        <button class="bg-[#f4b183] text-white px-4 py-2 rounded shadow hover:bg-[#e89c67]">Contáctanos</button>
+        <a href="contact.html" class="bg-[#f4b183] text-white px-4 py-2 rounded shadow hover:bg-[#e89c67]">Contáctanos</a>
       </div>
     </article>
     <div class="flex justify-center flex-col md:justify-end items-center gap-6">
@@ -60,52 +60,53 @@
             <h3 class="font-semibold mb-2">Arreglos simples</h3>
             <img src="../../public/images/details/arreglos_simples.jpeg" alt="Arreglos simples" class="w-48 h-48 object-cover mb-3 rounded">
             <p class="text-sm mb-3">Diseños frescos y delicados, ideales para regalar o decorar espacios con un toque natural y armonioso.</p>
-            <button class="bg-[#f4b183] text-white px-4 py-2 rounded hover:bg-[#e89c67]">Ver Más</button>
+            <a href="../../views/frontend/details.html" class="bg-[#f4b183] text-white px-4 py-2 rounded hover:bg-[#e89c67]">Ver Más</a>
           </article>
           <!-- Producto 2 -->
           <article class="border rounded-lg shadow-md p-4 flex flex-col items-center">
             <h3 class="font-semibold mb-2">Corona de flores</h3>
             <img src="../../public/images/details/corona_flores.jpg" alt="Corona Flores" class="w-48 h-48 object-cover mb-3 rounded">
             <p class="text-sm mb-3">Corona artesanal elaborada con flores naturales, símbolo de amor y respeto para homenajes o celebraciones solemnes.</p>
-            <button class="bg-[#f4b183] text-white px-4 py-2 rounded hover:bg-[#e89c67]">Ver Más</button>
+            <a href="../../views/frontend/details.html" class="bg-[#f4b183] text-white px-4 py-2 rounded hover:bg-[#e89c67]">Ver Más</a>
           </article>
           <!-- Producto 3 -->
           <article class="border rounded-lg shadow-md p-4 flex flex-col items-center">
             <h3 class="font-semibold mb-2">Pedestales florales</h3>
             <img src="../../public/images/details/pedestal_flores.jpg" alt="Pedestal de flores" class="w-48 h-48 object-cover mb-3 rounded">
             <p class="text-sm mb-3">Un elegante pedestal decorativo con flores frescas, perfecto para eventos, recepciones y ceremonias especiales.</p>
-            <button class="bg-[#f4b183] text-white px-4 py-2 rounded hover:bg-[#e89c67]">Ver Más</button>
+            <a href="../../views/frontend/details.html" class="bg-[#f4b183] text-white px-4 py-2 rounded hover:bg-[#e89c67]">Ver Más</a>
           </article>
         </div>
       </div>
 
       <div class="mt-8">
-        <button class="bg-[#f4b183] text-white px-6 py-2 rounded shadow hover:bg-[#b85c3f]">
+        <a href="products.html" class="bg-[#f4b183] text-white px-6 py-2 rounded shadow hover:bg-[#b85c3f]">
           Ver todos los productos
-        </button>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="contacto" class="bg-[#f4b183] text-white py-8">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6 px-6">
-      <div class="flex flex-col items-center gap-3">
-        <img src="../../public/images/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
-        <div class="flex gap-4">
-          <img src="../../public/images/footer/facebook.png" alt="Facebook" class="w-6 h-6 cursor-pointer">
-          <img src="../../public/images/footer/messenger.png" alt="Instagram" class="w-6 h-6 cursor-pointer">
-          <img src="../../public/images/footer/whatsapp.png" alt="WhatsApp" class="w-6 h-6 cursor-pointer">
-        </div>
-      </div>
-      <div>
-        <h4 class="font-semibold text-lg mb-2">📞 Contactos</h4>
-        <p>+593 000000000</p>
-        <p>+593 000000000</p>
-        <p>dafdecoraciones@gmail.com</p>
-      </div>
-    </div>
-  </footer>
+<footer id="contacto">
+    <div class="footer-container">
+        <div class="brand-section">
+            <img src="../../public/images/logo.jpeg" alt="DAF Logo" class="logo">
 
+            <div class="social-icons">
+                <img src="../../public/images/footer/facebook.png" alt="Facebook">
+                <img src="../../public/images/footer/messenger.png" alt="Instagram">
+                <img src="../../public/images/footer/whatsapp.png" alt="WhatsApp">
+            </div>
+        </div>
+        <div class="contact-section">
+            <h4>📞 Contactos</h4>
+            <p>+593 000000000</p>
+            <p>+593 000000000</p>
+            <p>dafdecoraciones@gmail.com</p>
+        </div>
+    </div>
+    <script src="../../public/js/start.js"></script>
+</footer>
 </body>
 </html>
