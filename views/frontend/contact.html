@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAF - Contáctanos</title>
+
+    <!-- Tailwind + jQuery -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/body.css"/>
 </head>
 
-<body class="font-sans">
+<body class="bg-[#fff7f2] text-gray-900 font-sans">
 
 <!-- Header -->
-  <header>
+<header>
     <div class="logo-area">
         <img src="../../public/images/logo.jpeg" alt="DAF Logo">
         <h1>Decoraciones de Arreglos Florales</h1>
@@ -25,100 +28,61 @@
         <a href="contact.html">Contáctanos</a>
         <a href="carrito.html" class="cart-btn">🛒</a>
     </nav>
-    </header>
+</header>
 
-<!-- Contenedor principal -->
+<!-- Contenido principal -->
 <main class="flex justify-center items-center py-10 px-4">
-
     <form id="formContacto" class="bg-white p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-2xl">
+        <h1 class="text-3xl font-extrabold text-center text-[#d26e4b] mb-6">Contáctanos 🌷</h1>
 
-        <h1 class="text-3xl font-extrabold text-center mb-6">Contáctanos 🌷</h1>
+        <input id="nombre" type="text" placeholder="Tu nombre completo" required
+               class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-[#f4b183] focus:ring-2">
 
-        <!-- Nombre -->
-        <label for="nombre" class="block mb-1 font-medium">Nombre completo</label>
-        <input id="nombre" type="text" required
-               class="w-full border rounded-lg p-3 mb-4 focus:ring-2">
+        <input id="email" type="email" placeholder="Correo electrónico" required
+               class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-[#f4b183] focus:ring-2">
 
-        <!-- Email -->
-        <label for="email" class="block mb-1 font-medium">Correo electrónico</label>
-        <input id="email" type="email" required
-               class="w-full border rounded-lg p-3 mb-4 focus:ring-2">
-
-        <!-- Motivo -->
-        <label for="motivo" class="block mb-1 font-medium">Motivo de la consulta</label>
         <select id="motivo" required
-                class="w-full border rounded-lg p-3 mb-4 bg-white focus:ring-2">
-            <option selected disabled value="">Seleccione una opción</option>
+                class="w-full border border-gray-300 rounded-lg p-3 mb-4 bg-white focus:ring-[#f4b183] focus:ring-2">
+            <option selected disabled value="">Motivo de la consulta</option>
             <option>Consulta sobre productos</option>
             <option>Personalización de arreglos</option>
             <option>Evento especial</option>
             <option>Estado de un pedido</option>
         </select>
 
-        <!-- Mensaje -->
-        <label for="mensaje" class="block mb-1 font-medium">Mensaje</label>
-        <textarea id="mensaje" rows="4" required
-                  class="w-full border rounded-lg p-3 mb-6 focus:ring-2"></textarea>
+        <textarea id="mensaje" rows="4" placeholder="Cuéntanos tu mensaje..." required
+                  class="w-full border border-gray-300 rounded-lg p-3 mb-6 focus:ring-[#f4b183] focus:ring-2"></textarea>
 
-        <!-- Botón -->
         <button type="submit"
-                class="w-full font-bold py-3 rounded-lg border hover:bg-gray-100 transition">
+                class="w-full bg-[#f4b183] text-white font-bold py-3 rounded-lg hover:bg-[#e89c67] transition">
             Enviar
         </button>
-
     </form>
 </main>
 
-<!-- MODAL CARGANDO -->
+<!-- Modal cargando -->
 <div id="modalCargando" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
     <div class="bg-white py-4 px-6 rounded shadow text-center">
-        <p class="font-semibold">Cargando...</p>
+        <p class="font-semibold text-[#d26e4b]">Cargando...</p>
     </div>
 </div>
 
-<!-- POPUP ÉXITO -->
+<!-- Popup éxito -->
 <div id="popupExito"
-     class="fixed top-5 right-5 py-3 px-5 rounded shadow hidden z-50">
+     class="fixed top-5 right-5 bg-green-600 text-white py-3 px-5 rounded shadow hidden z-50">
     ✅ Mensaje enviado correctamente
 </div>
 
-<!-- POPUP ERROR -->
+<!-- Popup error -->
 <div id="popupError"
-     class="fixed top-5 right-5 py-3 px-5 rounded shadow hidden z-50">
+     class="fixed top-5 right-5 bg-red-600 text-white py-3 px-5 rounded shadow hidden z-50">
     ❌ Complete todos los campos correctamente
 </div>
 
-<script>
-    $("#formContacto").submit(function (e) {
-        e.preventDefault();
+<!-- JS -->
+<script src="../../public/js/contacto.js"></script>
 
-        let nombre = $("#nombre").val().trim();
-        let email = $("#email").val().trim();
-        let motivo = $("#motivo").val();
-        let mensaje = $("#mensaje").val().trim();
-
-        if (nombre === "" || email === "" || motivo === "" || mensaje === "") {
-            mostrarPopup("#popupError");
-            return;
-        }
-
-        $("#modalCargando").removeClass("hidden").addClass("flex");
-
-        setTimeout(() => {
-            $("#modalCargando").addClass("hidden").removeClass("flex");
-            mostrarPopup("#popupExito");
-            $("#formContacto")[0].reset();
-        }, 2000);
-    });
-
-    function mostrarPopup(id) {
-        $(id).removeClass("hidden");
-        setTimeout(() => {
-            $(id).addClass("hidden");
-        }, 3000);
-    }
-</script>
-
+<!-- Footer -->
 <footer id="contacto">
     <div class="footer-container">
 
@@ -141,5 +105,6 @@
 
     </div>
 </footer>
+
 </body>
 </html>
