@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DF - Contáctanos</title>
+    <title>DAF - Contáctanos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="../../public/css/body.css"/>
 </head>
 
 <body class="font-sans">
 
 <!-- Header -->
-<header class="flex items-center justify-between px-6 py-3 shadow">
-    <div class="flex items-center gap-3">
-        <img src="/resources/logo.jpeg" alt="DAF Logo" class="w-16 h-16">
-        <h1 class="font-semibold text-lg">Decoraciones de Arreglos Florales</h1>
+  <header>
+    <div class="logo-area">
+        <img src="../../public/images/logo.jpeg" alt="DAF Logo">
+        <h1>Decoraciones de Arreglos Florales</h1>
     </div>
 
-    <nav class="flex items-center gap-6 font-medium">
-        <a href="../../index.html" class="hover:underline">Home</a>
-        <a href="../products/products.html" class="hover:underline">Productos</a>
-        <a href="contact.html" class="hover:underline">Contáctanos</a>
-        <a href="../carrito/carrito.html" class="p-2 rounded-full shadow hover:bg-gray-100">
-            🛒
-        </a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Productos</a>
+        <a href="contact.html">Contáctanos</a>
+        <a href="carrito.html" class="cart-btn">🛒</a>
     </nav>
-</header>
+    </header>
 
 <!-- Contenedor principal -->
 <main class="flex justify-center items-center py-10 px-4">
@@ -119,5 +119,27 @@
     }
 </script>
 
+<footer id="contacto">
+    <div class="footer-container">
+
+        <div class="brand-section">
+            <img src="../../public/images/logo.jpeg" alt="DAF Logo" class="logo">
+
+            <div class="social-icons">
+                <img src="../../public/images/footer/facebook.png" alt="Facebook">
+                <img src="../../public/images/footer/messenger.png" alt="Instagram">
+                <img src="../../public/images/footer/whatsapp.png" alt="WhatsApp">
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h4>📞 Contactos</h4>
+            <p>+593 000000000</p>
+            <p>+593 000000000</p>
+            <p>dafdecoraciones@gmail.com</p>
+        </div>
+
+    </div>
+</footer>
 </body>
 </html>

@@ -28,7 +28,7 @@ class ProductView {
                 </div>
                 <div class="flex justify-between items-center w-full mt-2 text-sm">
                     <span class="font-semibold text-orange-700">${prod.precio}$</span>
-                    <a href="../details/details.html" data-id="${prod.id}" 
+                    <a href="details.html" data-id="${prod.id}" 
                        class="px-2 py-1 bg-orange-500 text-white rounded-sm text-xs hover:bg-orange-600 transition">
                        Solicitar
                     </a>
