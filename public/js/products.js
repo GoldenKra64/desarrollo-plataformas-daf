@@ -3,7 +3,7 @@ const floralproducts = [
         id: 1,
         nombre: "Bouquets de flores",
         descripcion: "Arreglos elegantes y versátiles.",
-        image: "/resources/details/bouquet.jpg",
+        image: "../../public/images/details/bouquet.jpg",
         precio: 18,
     },
     {
@@ -121,15 +121,15 @@ setTimeout(() => {
 // Eventos filtros
 document.getElementById("q").addEventListener("input", (e) => {
     filtro.q = e.target.value;
-    renderProductos(aplicarFiltro());
+    view.renderProducts(aplicarFiltro());
 });
 
 document.getElementById("pmin").addEventListener("input", (e) => {
     filtro.min = Number(e.target.value) || null;
-    renderProductos(aplicarFiltro());
+    view.renderProducts(aplicarFiltro());
 });
 
 document.getElementById("pmax").addEventListener("input", (e) => {
     filtro.max = Number(e.target.value) || null;
-    renderProductos(aplicarFiltro());
+    view.renderProducts(aplicarFiltro());
 });
