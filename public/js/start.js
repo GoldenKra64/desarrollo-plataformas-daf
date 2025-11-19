@@ -3,7 +3,7 @@ const floralproducts = [
         id: 1,
         nombre: "Bouquets de flores",
         descripcion: "Arreglos elegantes y versátiles. Se trabajan en diferentes tamaños y combinaciones de color, con envolturas premium y acabados decorativos.",
-        image: "../images/details/bouquet.jpg",
+        image: "public/images/details/bouquet.jpg",
         precio: 18,
         cantidad: 10
     },
@@ -11,7 +11,7 @@ const floralproducts = [
         id: 2,
         nombre: "Cajas de rosas",
         descripcion: "Presentación elegante en caja cilíndrica o cuadrada. Conserva hidratación y forma por más tiempo.",
-        image: "../images/details/caja_rosas.jpeg",
+        image: "public/images/details/caja_rosas.jpeg",
         precio: 28,
         cantidad: 10
     },
@@ -19,7 +19,7 @@ const floralproducts = [
         id: 3,
         nombre: "Coronas florales",
         descripcion: "Diseños solemnes y armoniosos, adaptados a protocolos y preferencias de color.",
-        image: "../images/details/corona_flores.jpg",
+        image: "public/images/details/corona_flores.jpg",
         precio: 45,
         cantidad: 15
     },
@@ -27,7 +27,7 @@ const floralproducts = [
         id: 4,
         nombre: "Peceras florales",
         descripcion: "Composiciones modernas en vidrio, con flor focal y follaje en agua.",
-        image: "../images/details/pecera_flores.jpg",
+        image: "public/images/details/pecera_flores.jpg",
         precio: 22,
         cantidad: 15
     },
@@ -36,7 +36,7 @@ const floralproducts = [
         nombre: "Arreglos simples",
         descripcion: "Detalles rápidos y económicos con flores frescas y combinaciones armoniosas.",
         precio: 12,
-        image: "../images/details/arreglos_simples.jpeg",
+        image: "public/images/details/arreglos_simples.jpeg",
         cantidad: 8
     },
     {
@@ -44,7 +44,7 @@ const floralproducts = [
         nombre: "Canastos Florales",
         descripcion: "Arreglos en canasta con mix de flores y follajes, estilo cálido y campestre.",
         precio: 25,
-        image: "../images/details/canasto_flores.jpg",
+        image: "public/images/details/canasto_flores.jpg",
         cantidad: 12
     },
     {
@@ -52,7 +52,7 @@ const floralproducts = [
         nombre: "Centros de mesa",
         descripcion: "Diseños pensados para altura y diámetro adecuados, sin bloquear la vista de los invitados.",
         precio: 30,
-        image: "../images/details/centros_mesa.jpg",
+        image: "public/images/details/centros_mesa.jpg",
         cantidad: 6
     }
 ];
