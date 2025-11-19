@@ -1,8 +1,3 @@
-import pkg from "../products/productsModel.js";
-import ProductView from "../../views/ProductView.js";
-
-const { Products } = pkg;
-
 class ProductController {
     constructor() {
         this.model = new Products();
@@ -15,5 +10,3 @@ class ProductController {
         this.view.renderProducts(products);
     }
 }
-
-export default ProductController;
